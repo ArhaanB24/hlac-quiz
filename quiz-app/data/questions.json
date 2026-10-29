@@ -1,0 +1,695 @@
+{
+ "topics": {
+  "whatsapp": "WhatsApp Scams",
+  "phishing": "Phishing",
+  "everyday": "Everyday Online Fraud",
+  "prevention": "Scam Prevention"
+ },
+ "questions": [
+  {
+   "id": "Q01",
+   "topic": "whatsapp",
+   "type": "scenario",
+   "objective": "Impersonation of family or boss",
+   "a": {
+    "prompt": "\"Hi Mum, I dropped my phone, this is my new number. Please pay this bill urgently, I'll explain later.\" The profile photo is your child's. What first?",
+    "options": [
+     "Call your child on their old, saved number to confirm",
+     "Send the money, it's an emergency",
+     "Ask them to send a selfie",
+     "Reply asking them to share the bank details"
+    ],
+    "answer": 0,
+    "why": "Scammers copy public photos. Confirm through a channel you already trust, like the old number, before sending anything."
+   },
+   "b": {
+    "prompt": "Your 'manager' messages from an unsaved number: \"In a meeting, can't talk. Buy 5 gift cards for a client and send me the codes.\" What do you do?",
+    "options": [
+     "Buy them, then confirm later",
+     "Ask for the codes to be sent to a company email first",
+     "Verify with your manager via a known number or in person before doing anything",
+     "Buy just one card to be safe"
+    ],
+    "answer": 2,
+    "why": "Boss impersonation relies on secrecy and urgency. Gift-card codes are untraceable, so verify first through a trusted channel."
+   },
+   "kind": "chat"
+  },
+  {
+   "id": "Q02",
+   "topic": "whatsapp",
+   "type": "mcq",
+   "objective": "Account takeover via verification code",
+   "a": {
+    "prompt": "A friend's WhatsApp asks: \"I sent you a 6-digit code by mistake, please forward it to me.\" What is this?",
+    "options": [
+     "A harmless mix-up, forward the code",
+     "An attempt to take over your WhatsApp account",
+     "A bug in WhatsApp",
+     "A way to verify the friend's identity"
+    ],
+    "answer": 1,
+    "why": "That code is your own WhatsApp login code. Anyone holding it can register your number on their device.",
+    "task": {
+     "kind": "swipe",
+     "intro": "Swipe each message: scam or safe?",
+     "cards": [
+      {
+       "text": "\"Hey! I accidentally sent my WhatsApp code to your number. Can you read it out to me?\"",
+       "scam": true
+      },
+      {
+       "text": "SMS you asked for while setting up a new phone: \"Your WhatsApp code is 482-913. Don't share this code.\"",
+       "scam": false
+      },
+      {
+       "text": "\"I'm locked out of my account. Forward me the 6-digit code you just got, I'll explain later.\"",
+       "scam": true
+      },
+      {
+       "text": "WhatsApp tip: \"Turn on two-step verification in Settings > Account for extra protection.\"",
+       "scam": false
+      }
+     ]
+    }
+   },
+   "b": {
+    "prompt": "You receive an unexpected WhatsApp verification SMS, then a contact messages: \"Sorry, wrong number, can you read me the code?\" What should you do?",
+    "options": [
+     "Read it out, it's polite",
+     "Share it but change your password afterwards",
+     "Reply with only the last 3 digits",
+     "Never share it, and tell the contact to use another route"
+    ],
+    "answer": 3,
+    "why": "Verification codes must never be shared, in full or in part. A contact asking is likely already compromised.",
+    "task": {
+     "kind": "swipe",
+     "intro": "Swipe each message: scam or safe?",
+     "cards": [
+      {
+       "text": "\"Sorry, wrong number! A code is coming to you from me. Can you share it back?\"",
+       "scam": true
+      },
+      {
+       "text": "SMS after you reinstalled WhatsApp yourself: \"Use 731-205 to register. Never share this code.\"",
+       "scam": false
+      },
+      {
+       "text": "Your friend's account: \"I'm stuck! Read me the verification SMS you just got, quick!\"",
+       "scam": true
+      },
+      {
+       "text": "WhatsApp help page: \"WhatsApp will never call or message to ask for your code.\"",
+       "scam": false
+      }
+     ]
+    }
+   },
+   "kind": "swipe"
+  },
+  {
+   "id": "Q03",
+   "topic": "whatsapp",
+   "type": "scenario",
+   "objective": "Fraudulent investment groups",
+   "a": {
+    "prompt": "You're added to a WhatsApp group where members post screenshots of daily stock profits and an 'expert' urges you to install an app to join an IPO quota. What's the smartest move?",
+    "options": [
+     "Join with a small amount",
+     "Ask the expert for their experience",
+     "Leave the group, don't install the app, and report it",
+     "Wait to see if members really profit"
+    ],
+    "answer": 2,
+    "why": "Fake members and fabricated screenshots create social proof. Unregistered apps let scammers show fake gains while taking your deposits.",
+    "task": {
+     "kind": "redflags",
+     "intro": "Tap every red flag in this WhatsApp group message.",
+     "segments": [
+      {
+       "t": "Hello, you have been added to the "
+      },
+      {
+       "t": "VIP Stock Club, a group you never asked to join",
+       "flag": true
+      },
+      {
+       "t": ". Members earn "
+      },
+      {
+       "t": "guaranteed 40% returns in 10 days",
+       "flag": true
+      },
+      {
+       "t": ". Install our app "
+      },
+      {
+       "t": "from this link instead of the Play Store",
+       "flag": true
+      },
+      {
+       "t": " and deposit ₹10,000 to get an IPO quota. "
+      },
+      {
+       "t": "Only 3 seats left, decide in 15 minutes!",
+       "flag": true
+      },
+      {
+       "t": " Please see the details above."
+      }
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A 'crypto signals' group promises guaranteed 3x returns in 30 days if you deposit through their platform. Which fact most clearly marks this as a scam?",
+    "options": [
+     "Guaranteed high returns",
+     "The group has many members",
+     "The admin is friendly",
+     "Payments are made online"
+    ],
+    "answer": 0,
+    "why": "No legitimate investment can guarantee high returns. Guarantees, pressure and pooled unregulated platforms signal fraud.",
+    "task": {
+     "kind": "redflags",
+     "intro": "Tap every red flag in this WhatsApp group message.",
+     "segments": [
+      {
+       "t": "Welcome to Crypto Gold Signals! "
+      },
+      {
+       "t": "We guarantee 3x your money in 30 days.",
+       "flag": true
+      },
+      {
+       "t": " Transfer your deposit to "
+      },
+      {
+       "t": "our private wallet, not a registered exchange",
+       "flag": true
+      },
+      {
+       "t": ". "
+      },
+      {
+       "t": "Screenshots of members' profits are posted below as proof.",
+       "flag": true
+      },
+      {
+       "t": " Our manager will guide you step by step. "
+      },
+      {
+       "t": "Offer ends tonight, no refunds.",
+       "flag": true
+      }
+     ]
+    }
+   },
+   "kind": "redflags"
+  },
+  {
+   "id": "Q04",
+   "topic": "phishing",
+   "type": "mcq",
+   "objective": "Spotting a genuine URL",
+   "a": {
+    "prompt": "Which of these is most likely the genuine Amazon India website?",
+    "options": [
+     "amazon-in-support.com",
+     "amazon.in.secure-login.net",
+     "arnazon.in",
+     "amazon.in"
+    ],
+    "answer": 3,
+    "why": "Read the domain from right to left up to the first slash. The brand must be the registered domain, and lookalikes like 'arnazon' swap characters."
+   },
+   "b": {
+    "prompt": "Which URL is most likely the genuine Flipkart site?",
+    "options": [
+     "flipkart-offers.shop",
+     "flipkart.com",
+     "flipkart.com.deals-today.in",
+     "fIipkart.com"
+    ],
+    "answer": 1,
+    "why": "Extra words, odd endings or subdomain tricks can hide a fake registered domain. Stick to the exact brand domain."
+   },
+   "kind": "url"
+  },
+  {
+   "id": "Q05",
+   "topic": "phishing",
+   "type": "scenario",
+   "objective": "QR-code phishing (quishing)",
+   "a": {
+    "prompt": "At a café you notice the payment QR code is a sticker placed over the original one. What should you do?",
+    "options": [
+     "Ask the staff to confirm and check the merchant name shown before paying",
+     "Scan it, since it's the café's code",
+     "Pay a small test amount",
+     "Scan it with a different app"
+    ],
+    "answer": 0,
+    "why": "Scammers paste their own QR codes over genuine ones. Confirm with staff and check the payee name before paying."
+   },
+   "b": {
+    "prompt": "An email says: \"Scan the QR code to re-enable your account's two-factor authentication.\" What do you do?",
+    "options": [
+     "Scan with your phone's camera",
+     "Scan but don't log in",
+     "Don't scan, and check settings in the official app instead",
+     "Print it and scan on another phone"
+    ],
+    "answer": 2,
+    "why": "QR codes hide the destination from email filters and from you. Make security changes only inside the official app or site."
+   },
+   "kind": "cards"
+  },
+  {
+   "id": "Q06",
+   "topic": "phishing",
+   "type": "scenario",
+   "objective": "OTP theft by phone",
+   "a": {
+    "prompt": "A caller says: \"I'm from your bank. A ₹40,000 transaction is pending, share the OTP now to cancel it.\" What is the correct response?",
+    "options": [
+     "Share the OTP to cancel the transaction",
+     "Hang up and call the number on your card or bank's official site",
+     "Share only 3 digits",
+     "Ask the caller for their employee ID"
+    ],
+    "answer": 1,
+    "why": "An OTP authorises a payment, it never cancels one. Banks never ask for OTPs. Calling back via official numbers verifies the claim.",
+    "task": {
+     "kind": "match",
+     "intro": "Match each caller's line to the right response. Tap a line, then its response.",
+     "left": [
+      "\"I'm from your bank. Read me the OTP to cancel a payment.\"",
+      "\"Courier here. Tell me the OTP to confirm delivery.\"",
+      "\"Your account freezes unless you share the CVV now.\"",
+      "\"Tech support: install a remote app so I can fix this.\""
+     ],
+     "right": [
+      "Hang up and call the number on your card",
+      "Refuse: a parcel never needs your OTP",
+      "Never share card details, end the call",
+      "Decline and use the official app or store"
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A 'delivery agent' calls and asks you to read out the OTP you just received 'to confirm the delivery'. You aren't sure what order it's for. What do you do?",
+    "options": [
+     "Read it out",
+     "Read it out after verifying the agent's name",
+     "Ask them to send it as a text",
+     "Refuse, since OTPs are never needed to receive a parcel"
+    ],
+    "answer": 3,
+    "why": "Genuine OTP-based delivery codes are rare and tied to your order. If you can't tell, treat it as theft and don't share.",
+    "task": {
+     "kind": "match",
+     "intro": "Match each caller's line to the right response. Tap a line, then its response.",
+     "left": [
+      "\"Sir, a ₹40,000 debit is pending. Share the OTP to stop it.\"",
+      "\"Madam, I'm your relationship manager. Confirm your card PIN.\"",
+      "\"You won a gift! Tell me the SMS code to claim it.\"",
+      "\"Telecom KYC expired. Share the code we just sent.\""
+     ],
+     "right": [
+      "An OTP approves payments, it never cancels them",
+      "Banks never ask for your PIN",
+      "Real prizes never need your SMS code",
+      "Visit the operator's store or app instead"
+     ]
+    }
+   },
+   "kind": "match"
+  },
+  {
+   "id": "Q07",
+   "topic": "everyday",
+   "type": "scenario",
+   "objective": "UPI collect request fraud",
+   "a": {
+    "prompt": "You're selling a sofa online. The buyer says: \"I've sent you the money, approve the request on your UPI app and enter your PIN to receive it.\" What's wrong?",
+    "options": [
+     "Nothing, that's how UPI works",
+     "The buyer used the wrong app",
+     "Entering a PIN sends money out, receiving money never needs a PIN",
+     "The request has expired"
+    ],
+    "answer": 2,
+    "why": "You never enter a UPI PIN to receive money. A collect request with a PIN prompt is pulling money out of your account.",
+    "task": {
+     "kind": "swipe",
+     "intro": "Swipe each UPI situation: scam or safe?",
+     "cards": [
+      {
+       "text": "A buyer says: \"Approve the request on your app and enter your PIN to receive my payment.\"",
+       "scam": true
+      },
+      {
+       "text": "You scan a shop's QR code and enter your own PIN to pay ₹250 for groceries.",
+       "scam": false
+      },
+      {
+       "text": "A seller says: \"I sent your refund. Just enter your UPI PIN to accept it.\"",
+       "scam": true
+      },
+      {
+       "text": "You get a bank SMS showing a credit for money a friend sent you.",
+       "scam": false
+      }
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A seller says they've sent you a refund via a UPI 'request'. You see a prompt asking you to enter your UPI PIN. What do you do?",
+    "options": [
+     "Decline the request and don't enter your PIN",
+     "Enter the PIN to get the refund",
+     "Enter the PIN but check the amount first",
+     "Ask the seller to try again"
+    ],
+    "answer": 0,
+    "why": "Refunds are credited automatically. A PIN prompt means money is leaving your account.",
+    "task": {
+     "kind": "swipe",
+     "intro": "Swipe each UPI situation: scam or safe?",
+     "cards": [
+      {
+       "text": "A stranger says: \"Send ₹1 and enter your PIN to verify and win ₹5,000.\"",
+       "scam": true
+      },
+      {
+       "text": "You type your PIN in your own UPI app to pay your electricity bill.",
+       "scam": false
+      },
+      {
+       "text": "Someone says they paid you by mistake and sends a collect request asking you to pay them back.",
+       "scam": true
+      },
+      {
+       "text": "A customer shows a payment screen, so you check your own bank app before handing over goods.",
+       "scam": false
+      }
+     ]
+    }
+   },
+   "kind": "swipe"
+  },
+  {
+   "id": "Q08",
+   "topic": "everyday",
+   "type": "scenario",
+   "objective": "Screen-sharing and remote-access scams",
+   "a": {
+    "prompt": "A 'support executive' asks you to install AnyDesk so they can 'fix your refund'. What happens if you do?",
+    "options": [
+     "Nothing, it's only a chat tool",
+     "They can only see your photos",
+     "It just checks your internet speed",
+     "They can see and control your phone, including banking apps"
+    ],
+    "answer": 3,
+    "why": "Remote-access tools let scammers watch your screen, see OTPs and move money themselves.",
+    "task": {
+     "kind": "redflags",
+     "intro": "Tap every red flag in this 'support' call script.",
+     "segments": [
+      {
+       "t": "Hello sir, I am calling from the Refund Department. Your refund of ₹4,999 is stuck. To release it, please "
+      },
+      {
+       "t": "install AnyDesk and read me the 9-digit code",
+       "flag": true
+      },
+      {
+       "t": ". Keep your banking app open "
+      },
+      {
+       "t": "so I can see your account",
+       "flag": true
+      },
+      {
+       "t": ". When the bank sends an OTP, "
+      },
+      {
+       "t": "read it out to me immediately",
+       "flag": true
+      },
+      {
+       "t": ". Please "
+      },
+      {
+       "t": "don't end the call or tell anyone",
+       "flag": true
+      },
+      {
+       "t": " until it is done."
+      }
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A caller claiming to be from your telecom provider says KYC has expired and asks you to share your screen via a quick-support app. Best action?",
+    "options": [
+     "Share the screen but not the OTP",
+     "Decline, and visit the operator's store or official app",
+     "Share the screen while on loudspeaker",
+     "Share only for a minute"
+    ],
+    "answer": 1,
+    "why": "No legitimate service needs remote control of your phone for KYC. Visit the official store or app instead.",
+    "task": {
+     "kind": "redflags",
+     "intro": "Tap every red flag in this 'telecom' call script.",
+     "segments": [
+      {
+       "t": "Madam, this is TeleCare calling. Your SIM KYC has expired and "
+      },
+      {
+       "t": "your number will be blocked in 30 minutes",
+       "flag": true
+      },
+      {
+       "t": ". To fix it, "
+      },
+      {
+       "t": "download the QuickSupport app and let me see your screen",
+       "flag": true
+      },
+      {
+       "t": ". I will "
+      },
+      {
+       "t": "also need the OTP that arrives",
+       "flag": true
+      },
+      {
+       "t": " to update your records. You can "
+      },
+      {
+       "t": "pay a ₹10 verification fee to my personal UPI number",
+       "flag": true
+      },
+      {
+       "t": " to finish."
+      }
+     ]
+    }
+   },
+   "kind": "redflags"
+  },
+  {
+   "id": "Q09",
+   "topic": "everyday",
+   "type": "scenario",
+   "objective": "Digital arrest scams",
+   "a": {
+    "prompt": "On a video call, a person in uniform says a parcel in your name contains illegal items, that you're under 'digital arrest', and must stay on camera and transfer money for 'verification'. What is this?",
+    "options": [
+     "A scam: no agency arrests or investigates people by video call and demands money",
+     "A real police process",
+     "A court notice",
+     "A routine bank check"
+    ],
+    "answer": 0,
+    "why": "'Digital arrest' doesn't exist in law. Agencies don't demand payments or isolation over a call. Disconnect and report to 1930.",
+    "task": {
+     "kind": "match",
+     "intro": "Match each caller's claim to the truth. Tap a claim, then the truth.",
+     "left": [
+      "\"You are under digital arrest.\"",
+      "\"Stay on camera and tell no one.\"",
+      "\"Transfer money to a safe account to prove your innocence.\"",
+      "\"I'll send my officer ID on WhatsApp.\""
+     ],
+     "right": [
+      "Not a real legal process: hang up",
+      "Isolation and secrecy are scam tactics",
+      "Agencies never ask you to pay or move savings",
+      "Uniform photos and IDs are easy to fake"
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A caller says they're from TRAI and your number will be disconnected for illegal activity, then connects you to a 'police officer' who tells you not to tell anyone and to move your savings 'for safety'. What do you do?",
+    "options": [
+     "Follow instructions, to avoid arrest",
+     "Move only part of your money",
+     "Hang up, tell family, and report at 1930 or cybercrime.gov.in",
+     "Ask them to send a letter by post"
+    ],
+    "answer": 2,
+    "why": "Secrecy and pressure are core scam tactics. Real authorities don't ask you to transfer money to prove innocence.",
+    "task": {
+     "kind": "match",
+     "intro": "Match each caller's claim to the truth. Tap a claim, then the truth.",
+     "left": [
+      "\"A parcel in your name has drugs.\"",
+      "\"Your Aadhaar is linked to money laundering.\"",
+      "\"Don't hang up or a warrant will be issued.\"",
+      "\"Pay a fine now to close the case.\""
+     ],
+     "right": [
+      "Scammers invent cases to scare you: check with the real agency",
+      "Authorities never investigate by video call",
+      "Keeping you on the line stops you from thinking or asking family",
+      "Courts don't collect fines over a phone call"
+     ]
+    }
+   },
+   "kind": "match"
+  },
+  {
+   "id": "Q10",
+   "topic": "prevention",
+   "type": "mcq",
+   "objective": "Recognising warning signs",
+   "a": {
+    "prompt": "Which combination of signs most strongly suggests a scam?",
+    "options": [
+     "A greeting and a company logo",
+     "Urgency, secrecy and a request for money or codes",
+     "A message sent late at night",
+     "A message with a typo"
+    ],
+    "answer": 1,
+    "why": "Pressure to act fast, keep quiet and hand over money or codes is the common thread across scam types."
+   },
+   "b": {
+    "prompt": "Which of these should make you most suspicious of a message?",
+    "options": [
+     "It comes from a contact you've saved",
+     "It includes your first name",
+     "It has a link to a well-known brand",
+     "It offers a prize and says 'claim in the next 10 minutes, don't tell anyone'"
+    ],
+    "answer": 3,
+    "why": "Time pressure and secrecy stop you from checking with others. Slow down and verify."
+   },
+   "kind": "cards"
+  },
+  {
+   "id": "Q11",
+   "topic": "prevention",
+   "type": "scenario",
+   "objective": "Verifying identity through a second channel",
+   "a": {
+    "prompt": "A relative's WhatsApp account messages you asking for urgent money. What is the most reliable way to check?",
+    "options": [
+     "Ask a personal question in the same chat",
+     "Check their profile photo",
+     "Call them on a number you already know",
+     "Ask them to send a voice note"
+    ],
+    "answer": 2,
+    "why": "If the account is hijacked, everything in that chat is controlled by the scammer. Use a separate, trusted channel.",
+    "task": {
+     "kind": "order",
+     "intro": "A relative's account asks for urgent money. Put the steps in the right order.",
+     "steps": [
+      "Pause and don't send anything yet",
+      "Call them on a number you already have saved",
+      "Ask something only the real person would know",
+      "Send money only after confirming it's really them"
+     ]
+    }
+   },
+   "b": {
+    "prompt": "A caller says they're from your bank. How do you confirm it?",
+    "options": [
+     "Hang up and dial the number printed on your card or the bank's website",
+     "Trust the caller ID on your screen",
+     "Ask the caller to verify your details",
+     "Ask them to call back in an hour"
+    ],
+    "answer": 0,
+    "why": "Caller ID can be faked. Call the official number yourself to reach the real bank.",
+    "task": {
+     "kind": "order",
+     "intro": "A caller says they're from your bank. Put the steps in the right order.",
+     "steps": [
+      "Don't share anything, just hang up",
+      "Find the bank's number on your card or its website",
+      "Call that number yourself",
+      "Act only through the bank's official channel"
+     ]
+    }
+   },
+   "kind": "order"
+  },
+  {
+   "id": "Q12",
+   "topic": "prevention",
+   "type": "mcq",
+   "objective": "Reporting and responding safely",
+   "a": {
+    "prompt": "You've just lost money in an online scam. What is the best first step?",
+    "options": [
+     "Wait a week to see if it's refunded",
+     "Post about it and wait for replies",
+     "Message the scammer to ask for a refund",
+     "Call the national cybercrime helpline 1930 and report at cybercrime.gov.in quickly"
+    ],
+    "answer": 3,
+    "why": "Fast reporting improves the chance of freezing funds. The helpline is 1930 and complaints are filed at cybercrime.gov.in.",
+    "task": {
+     "kind": "order",
+     "intro": "You've just been scammed. Put your response in order, most urgent first.",
+     "steps": [
+      "Call your bank to block the account or card",
+      "Call the cybercrime helpline 1930",
+      "File a report at cybercrime.gov.in",
+      "Save screenshots and change your passwords"
+     ]
+    }
+   },
+   "b": {
+    "prompt": "You realise you shared your OTP with a fraudster and money has left your account. What do you do first?",
+    "options": [
+     "Wait for the bank to notice",
+     "Contact your bank to block the account or card, and report to 1930",
+     "Delete the chat",
+     "Change your phone wallpaper"
+    ],
+    "answer": 1,
+    "why": "Speed is critical. Alert your bank so it can block transactions, and report to the cybercrime helpline.",
+    "task": {
+     "kind": "order",
+     "intro": "You shared an OTP and money left your account. Most urgent first.",
+     "steps": [
+      "Tell your bank immediately to block transactions",
+      "Report to 1930 straight away",
+      "Note the transaction details and file at cybercrime.gov.in",
+      "Change passwords and warn family and friends"
+     ]
+    }
+   },
+   "kind": "order"
+  }
+ ]
+}
