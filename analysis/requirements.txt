@@ -1,0 +1,2 @@
+XlsxWriter==3.3.1
+formulas[excel]==1.3.4
