@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local tooling, Word lock files and build output
+~$*
+__pycache__/
+node_modules/
+.venv/
+.next/
