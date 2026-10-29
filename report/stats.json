@@ -1,0 +1,424 @@
+{
+ "total": 90,
+ "nq": 12,
+ "target": 60.0,
+ "substantialPp": 25,
+ "scenarios": {
+  "Social": {
+   "n": 47,
+   "avgPre": 42.90780141843972,
+   "avgPost": 55.673758865248224,
+   "sdPre": 21.70138824647959,
+   "sdPost": 24.14644224818509,
+   "gainPp": 12.765957446808507,
+   "relative": 29.75206611570247,
+   "improvedPct": 55.319148936170215,
+   "meanChange": 1.5319148936170213,
+   "sdChange": 2.765085609412854,
+   "cohenDz": 0.5540207827208331,
+   "hakeGain": 0.22360248447204964,
+   "cats": {
+    "Substantial": 19,
+    "Modest": 7,
+    "Unchanged": 12,
+    "Lower": 9
+   },
+   "topics": [
+    {
+     "topic": "WhatsApp Scams",
+     "pre": 51.06382978723404,
+     "post": 60.28368794326241,
+     "gain": 9.219858156028366
+    },
+    {
+     "topic": "Phishing",
+     "pre": 43.262411347517734,
+     "post": 57.446808510638306,
+     "gain": 14.184397163120572
+    },
+    {
+     "topic": "Everyday Online Fraud",
+     "pre": 34.04255319148936,
+     "post": 44.680851063829785,
+     "gain": 10.638297872340424
+    },
+    {
+     "topic": "Scam Prevention",
+     "pre": 43.262411347517734,
+     "post": 60.28368794326241,
+     "gain": 17.021276595744673
+    }
+   ],
+   "questions": [
+    {
+     "id": "Q01",
+     "topic": "WhatsApp Scams",
+     "objective": "Impersonation of family or boss",
+     "pre": 55.319148936170215,
+     "post": 70.2127659574468,
+     "gain": 14.893617021276595
+    },
+    {
+     "id": "Q02",
+     "topic": "WhatsApp Scams",
+     "objective": "Account takeover via verification code",
+     "pre": 48.93617021276596,
+     "post": 55.319148936170215,
+     "gain": 6.382978723404255
+    },
+    {
+     "id": "Q03",
+     "topic": "WhatsApp Scams",
+     "objective": "Fraudulent investment groups",
+     "pre": 48.93617021276596,
+     "post": 55.319148936170215,
+     "gain": 6.382978723404255
+    },
+    {
+     "id": "Q04",
+     "topic": "Phishing",
+     "objective": "Spotting a genuine URL",
+     "pre": 46.808510638297875,
+     "post": 55.319148936170215,
+     "gain": 8.51063829787234
+    },
+    {
+     "id": "Q05",
+     "topic": "Phishing",
+     "objective": "QR-code phishing (quishing)",
+     "pre": 34.04255319148936,
+     "post": 53.191489361702125,
+     "gain": 19.148936170212767
+    },
+    {
+     "id": "Q06",
+     "topic": "Phishing",
+     "objective": "OTP theft by phone",
+     "pre": 48.93617021276596,
+     "post": 63.829787234042556,
+     "gain": 14.893617021276595
+    },
+    {
+     "id": "Q07",
+     "topic": "Everyday Online Fraud",
+     "objective": "UPI collect request fraud",
+     "pre": 31.914893617021278,
+     "post": 42.5531914893617,
+     "gain": 10.638297872340425
+    },
+    {
+     "id": "Q08",
+     "topic": "Everyday Online Fraud",
+     "objective": "Screen-sharing and remote-access scams",
+     "pre": 34.04255319148936,
+     "post": 46.808510638297875,
+     "gain": 12.76595744680851
+    },
+    {
+     "id": "Q09",
+     "topic": "Everyday Online Fraud",
+     "objective": "Digital arrest scams",
+     "pre": 36.17021276595745,
+     "post": 44.680851063829785,
+     "gain": 8.51063829787234
+    },
+    {
+     "id": "Q10",
+     "topic": "Scam Prevention",
+     "objective": "Recognising warning signs",
+     "pre": 51.06382978723404,
+     "post": 68.08510638297872,
+     "gain": 17.02127659574468
+    },
+    {
+     "id": "Q11",
+     "topic": "Scam Prevention",
+     "objective": "Verifying identity through a second channel",
+     "pre": 48.93617021276596,
+     "post": 65.95744680851064,
+     "gain": 17.02127659574468
+    },
+    {
+     "id": "Q12",
+     "topic": "Scam Prevention",
+     "objective": "Reporting and responding safely",
+     "pre": 29.78723404255319,
+     "post": 46.808510638297875,
+     "gain": 17.02127659574468
+    }
+   ],
+   "change": [
+    3,
+    1,
+    0,
+    0,
+    6,
+    -1,
+    3,
+    4,
+    5,
+    3,
+    5,
+    4,
+    3,
+    4,
+    2,
+    -6,
+    0,
+    0,
+    -1,
+    -1,
+    1,
+    1,
+    5,
+    2,
+    4,
+    3,
+    6,
+    -4,
+    5,
+    6,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    2,
+    -2,
+    -1,
+    3,
+    -2,
+    1,
+    6,
+    0,
+    -2,
+    0,
+    0
+   ],
+   "bestLearners": [
+    [
+     "Aditya Bhat",
+     "SM005",
+     6
+    ],
+    [
+     "Harpreet Kaur",
+     "SM030",
+     6
+    ],
+    [
+     "Rohan Shah",
+     "SM027",
+     6
+    ]
+   ]
+  },
+  "Seminar": {
+   "n": 43,
+   "avgPre": 42.44186046511628,
+   "avgPost": 91.27906976744185,
+   "sdPre": 22.69929035674118,
+   "sdPost": 11.34964517837059,
+   "gainPp": 48.837209302325576,
+   "relative": 115.06849315068493,
+   "improvedPct": 95.34883720930233,
+   "meanChange": 5.8604651162790695,
+   "sdChange": 2.756649064395093,
+   "cohenDz": 2.125938042666691,
+   "hakeGain": 0.8484848484848484,
+   "cats": {
+    "Substantial": 37,
+    "Modest": 4,
+    "Unchanged": 1,
+    "Lower": 1
+   },
+   "topics": [
+    {
+     "topic": "WhatsApp Scams",
+     "pre": 42.63565891472868,
+     "post": 94.57364341085271,
+     "gain": 51.93798449612403
+    },
+    {
+     "topic": "Phishing",
+     "pre": 41.86046511627907,
+     "post": 88.37209302325581,
+     "gain": 46.51162790697674
+    },
+    {
+     "topic": "Everyday Online Fraud",
+     "pre": 35.65891472868217,
+     "post": 89.14728682170544,
+     "gain": 53.488372093023266
+    },
+    {
+     "topic": "Scam Prevention",
+     "pre": 49.6124031007752,
+     "post": 93.02325581395348,
+     "gain": 43.410852713178286
+    }
+   ],
+   "questions": [
+    {
+     "id": "Q01",
+     "topic": "WhatsApp Scams",
+     "objective": "Impersonation of family or boss",
+     "pre": 46.51162790697674,
+     "post": 95.34883720930233,
+     "gain": 48.837209302325576
+    },
+    {
+     "id": "Q02",
+     "topic": "WhatsApp Scams",
+     "objective": "Account takeover via verification code",
+     "pre": 39.53488372093023,
+     "post": 93.02325581395348,
+     "gain": 53.48837209302325
+    },
+    {
+     "id": "Q03",
+     "topic": "WhatsApp Scams",
+     "objective": "Fraudulent investment groups",
+     "pre": 41.86046511627907,
+     "post": 95.34883720930233,
+     "gain": 53.48837209302325
+    },
+    {
+     "id": "Q04",
+     "topic": "Phishing",
+     "objective": "Spotting a genuine URL",
+     "pre": 32.55813953488372,
+     "post": 93.02325581395348,
+     "gain": 60.46511627906976
+    },
+    {
+     "id": "Q05",
+     "topic": "Phishing",
+     "objective": "QR-code phishing (quishing)",
+     "pre": 30.23255813953488,
+     "post": 83.72093023255815,
+     "gain": 53.48837209302325
+    },
+    {
+     "id": "Q06",
+     "topic": "Phishing",
+     "objective": "OTP theft by phone",
+     "pre": 62.7906976744186,
+     "post": 88.37209302325581,
+     "gain": 25.581395348837212
+    },
+    {
+     "id": "Q07",
+     "topic": "Everyday Online Fraud",
+     "objective": "UPI collect request fraud",
+     "pre": 34.883720930232556,
+     "post": 86.04651162790698,
+     "gain": 51.162790697674424
+    },
+    {
+     "id": "Q08",
+     "topic": "Everyday Online Fraud",
+     "objective": "Screen-sharing and remote-access scams",
+     "pre": 27.906976744186046,
+     "post": 88.37209302325581,
+     "gain": 60.46511627906976
+    },
+    {
+     "id": "Q09",
+     "topic": "Everyday Online Fraud",
+     "objective": "Digital arrest scams",
+     "pre": 44.18604651162791,
+     "post": 93.02325581395348,
+     "gain": 48.837209302325576
+    },
+    {
+     "id": "Q10",
+     "topic": "Scam Prevention",
+     "objective": "Recognising warning signs",
+     "pre": 58.139534883720934,
+     "post": 100.0,
+     "gain": 41.86046511627907
+    },
+    {
+     "id": "Q11",
+     "topic": "Scam Prevention",
+     "objective": "Verifying identity through a second channel",
+     "pre": 53.48837209302325,
+     "post": 97.67441860465115,
+     "gain": 44.18604651162791
+    },
+    {
+     "id": "Q12",
+     "topic": "Scam Prevention",
+     "objective": "Reporting and responding safely",
+     "pre": 37.2093023255814,
+     "post": 81.3953488372093,
+     "gain": 44.18604651162791
+    }
+   ],
+   "change": [
+    9,
+    6,
+    9,
+    9,
+    6,
+    8,
+    7,
+    4,
+    3,
+    1,
+    9,
+    1,
+    7,
+    9,
+    5,
+    5,
+    7,
+    8,
+    -1,
+    7,
+    7,
+    4,
+    8,
+    3,
+    3,
+    7,
+    4,
+    2,
+    9,
+    2,
+    7,
+    8,
+    9,
+    7,
+    10,
+    7,
+    7,
+    6,
+    7,
+    0,
+    4,
+    5,
+    7
+   ],
+   "bestLearners": [
+    [
+     "Rohan Yadav",
+     "SEM035",
+     10
+    ],
+    [
+     "Diya Mukherjee",
+     "SEM004",
+     9
+    ],
+    [
+     "Fatima Agarwal",
+     "SEM029",
+     9
+    ]
+   ]
+  }
+ }
+}
